@@ -28,11 +28,23 @@ class UserAdapter(
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.tv_first_name.text = users!![position]!!.firstName
-        val lastName = " ${users[position]!!.lastName}"
+        //init value
+        var lastName = ""
+        var avatar = ""
+        var firstName = ""
+        if (users != null && users[position] != null) {
+            val currentUser = users[position]
+            lastName = " ${currentUser!!.lastName}"
+            avatar = currentUser.avatar!!
+            firstName = currentUser.firstName!!
+        }
+
+        //set value
+        holder.tv_first_name.text = firstName
         holder.tv_last_name.text = lastName
+
         Picasso.get()
-            .load(users[position]!!.avatar)
+            .load(avatar)
             .placeholder(R.mipmap.ic_launcher)// if load failed will using placeholder
             .into(holder.iv_avatar)
     }
