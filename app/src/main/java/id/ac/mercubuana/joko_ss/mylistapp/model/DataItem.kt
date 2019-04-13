@@ -2,6 +2,7 @@ package id.ac.mercubuana.joko_ss.mylistapp.model
 
 
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
 
 data class DataItem(
@@ -17,4 +18,4 @@ data class DataItem(
 
     @field:SerializedName("first_name")
     val firstName: String? = null
-)
+) : Serializable

@@ -2,6 +2,10 @@
     <string name="app_name">My List App</string>
     <string name="testing">Ngasal Aja</string>
     <string name="testing_again">Testing Lagi</string>
+    <string name="foto_anjing">Foto Anjing</string>
+    <string name="dog">Dog</string>
+    <string name="button">Next</string>
+    <string name="nama">Nama</string>
     <string-array name="first_names">
         <item>George</item>
         <item>Janet</item>

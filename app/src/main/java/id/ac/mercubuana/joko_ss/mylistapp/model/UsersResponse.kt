@@ -13,7 +13,7 @@ data class UsersResponse(
     val total: Int? = null,
 
     @field:SerializedName("data")
-    val data: List<DataItem?>? = null,
+    val data: ArrayList<DataItem?> = ArrayList(),
 
     @field:SerializedName("page")
     val page: Int? = null,
